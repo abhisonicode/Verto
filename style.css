@@ -1,0 +1,327 @@
+:root {
+  --primary-color: #1e1e27;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins";
+  color: var(--primary-color);
+  background-color: #f2f2f2;
+}
+
+.introduction h1 {
+  margin-top: 3rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
+  font-size: 2.5rem;
+  background: linear-gradient(165deg, #25868f, #e1586f, #7e7180);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introduction p {
+  margin-top: 4px;
+  text-align: center;
+}
+
+.section--one,
+.introduction {
+  margin-inline: auto;
+  max-width: 1280px;
+}
+
+.section--one .inner--section {
+  margin-inline: 20px;
+  padding: 3rem 3rem;
+  box-sizing: border-box;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.section--one .carousel-container {
+  overflow-x: auto;
+  display: flex;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.section--one .title {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 2rem;
+}
+
+.section--one .carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.section--one .carousel-container .feature--card-lists {
+  display: flex;
+  column-gap: 20px;
+}
+
+.section--one .carousel-container .feature--card-lists .feature-card {
+  min-width: calc(100% / 4);
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  height: 360px;
+  color: var(--primary-color);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.section--one .feature--card-lists .feature-card .heading {
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.section--one .feature--card-lists .feature-card .subheading {
+  text-align: left;
+  font-size: 14px;
+}
+
+.section--one .feature--card-lists .feature-card img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  border-radius: 8px;
+}
+
+.section--two {
+  margin-inline: auto;
+  max-width: 1280px;
+}
+
+.section--two .inner--section {
+  margin-inline: 20px;
+  background-color: #232e3a;
+  box-sizing: border-box;
+  margin-bottom: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.section--two #globeimage {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.section--two .content--area {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 70px;
+  width: 55%;
+  box-sizing: border-box;
+}
+
+.section--two .content--area .title {
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 24px;
+  font-size: 28px;
+  max-width: 500px;
+}
+
+.section--two .content--area .subtitle {
+  margin-bottom: 3rem;
+  max-width: 440px;
+  font-size: 14px;
+}
+
+.section--two .content--area .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.section--two .content--area .stats .stat .number {
+  font-weight: 600;
+  font-size: 28px;
+  border-left: 2px solid #30c2e1;
+  padding-left: 16px;
+  margin-bottom: 10px;
+}
+
+.section--two .content--area .stats .stat .info {
+  font-size: 12px;
+  padding-left: 16px;
+}
+
+/* Responsive Design for Laptops */
+@media (min-width: 809px) and (max-width: 1200px) {
+  .section--one .inner--section {
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+  }
+
+  .section--one .carousel-container .feature--card-lists .feature-card {
+    min-width: calc(100% / 3);
+  }
+
+  .section--two .inner--section {
+    min-height: 500px;
+  }
+
+  .section--two .content--area {
+    width: 65%;
+    padding: 20px 35px;
+  }
+
+  .section--two .content--area .title {
+    font-size: 16px;
+  }
+
+  .section--two .content--area .subtitle {
+    font-size: 12px;
+  }
+
+  .section--two .content--area .stats {
+    gap: 16px;
+  }
+}
+
+/* Responsive Design for Tablets */
+@media (min-width: 580px) and (max-width: 808px) {
+  .section--one .carousel-container .feature--card-lists .feature-card {
+    height: 390px;
+  }
+
+  .section--one .feature--card-lists .feature-card .subheading {
+    width: 75% !important;
+  }
+
+  .section--one .feature--card-lists .feature-card img {
+    height: 275px;
+  }
+
+  .section--one .inner--section {
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+  }
+
+  .section--one .carousel-container .feature--card-lists .feature-card {
+    min-width: calc(100% / 2);
+  }
+
+  .section--two .content--area {
+    padding: 40px 35px;
+  }
+
+  .section--two .content--area::before {
+    background-position-x: 760px !important;
+  }
+
+  .section--two .content--area .title {
+    font-size: 24px;
+  }
+
+  .section--two .content--area .stats {
+    gap: 24px;
+  }
+}
+
+/* Responsive Design for Mobiles */
+@media (max-width: 580px) {
+  .section--one .carousel-container .feature--card-lists .feature-card {
+    height: 390px;
+    width: 200px !important;
+    max-width: 200px !important;
+    min-width: none;
+  }
+
+  .section--one .feature--card-lists .feature-card .subheading {
+    width: 75% !important;
+  }
+
+  .section--one .inner--section {
+    padding: 3rem 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .section--two .content--area {
+    padding: 32px 22px;
+  }
+
+  .section--two .content--area::before {
+    background-position-x: 740px !important;
+  }
+
+  .section--two .content--area .title {
+    font-size: 22px;
+  }
+
+  .section--two .content--area .subtitle {
+    font-size: 12px;
+  }
+
+  .section--two .content--area .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Responsive Background Image for Mobiles and Tablets */
+
+@media (max-width: 1001px) {
+  .section--two .inner--section {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .section--two .content--area {
+    width: 100%;
+    position: relative;
+    top: auto;
+    transform: none;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section--two .content--area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./images/globe.svg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .section--two .content--area > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section--two #globeimage {
+    display: none;
+  }
+}
